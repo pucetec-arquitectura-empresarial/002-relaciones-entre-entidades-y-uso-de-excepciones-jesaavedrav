@@ -47,7 +47,6 @@ class SubjectService(
         subject.students.add(student)
         return subjectMapper.toResponse(subjectRepository.save(subject))
     }
-
     
     fun listSubjects(): List<SubjectResponse> =
         subjectMapper.toResponseList(subjectRepository.findAll())
